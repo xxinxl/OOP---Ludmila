@@ -101,6 +101,13 @@ class Redneck extends TribeMember {
         console.log(`Абориген ${this.name} живет в племени Реднек, имеет навык войны ${this.warSkill}`);
     }
 }
+
+class Tomogav extends Apache {
+    constructor(name) {
+        super(name);
+        this.dogFriendship = 60 + Math.round(Math.random() * 40);
+    }
+}
 // создадим класс оружия
 class Item {
     constructor(name) {
@@ -137,6 +144,7 @@ class Tools extends Item {
 }
 
 const Vitaly = new Apache('Vitaly');
+console.log(Vitaly);
 Vitaly.getDescription();
 const Daniil = new Redneck('Daniil');
 Daniil.getDescription();
